@@ -1,11 +1,7 @@
-// Class Book
-// Properties: title, author, language, subject
-// Going to make the book a card. Card will have:
-// Randomized background color: khaki, bisque, lavender,lavenderblush, aliceblue
-// Title in an H1
-// Title in an H2
-// Language in a p
-// Subject tags in a p
+/*
+Render a book card for each book in bookData
+add the books to the bookshelf
+*/
 
 class Book {
   constructor(title, author, language, subject) {
