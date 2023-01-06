@@ -1,0 +1,81 @@
+.card {
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 13em;
+  padding: 2em;
+}
+
+.bookshelfSection {
+  background-color: darkkhaki;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 2em;
+}
+body {
+  background-color: cornsilk;
+}
+
+.titleCard {
+  /* edit spacing here*/
+  color: Peru;
+  font-size: 2em;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  margin: 0;
+}
+
+.authorCard {
+  color: Peru;
+  font-size: 1.5em;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+.language {
+  color: #d2985e;
+  font-size: 1em;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+.subjectTags {
+  color: #d2985e;
+  font-size: 1em;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pageHeader {
+  color: #d2985e;
+  font-size: 5em;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+button {
+  background-color: khaki;
+  border: none;
+  padding: 1em;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: peru;
+  border-radius: 2em;
+  margin: 2em;
+}
+
+button:hover {
+  background-color: lavender;
+  color: rgb(205, 155, 105);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
