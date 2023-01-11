@@ -59,8 +59,10 @@ const filterBooks = (books) =>
   books.filter((book) => book.author.toString().toLowerCase().includes(searchInput.value.toLowerCase()) || book.title.toLowerCase().includes(searchInput.value.toLowerCase()) || book.subject.toString().toLowerCase().includes(searchInput.value.toLowerCase())
   );
 // Search Button Event Listener
-searchButton.addEventListener("click", () =>
+searchButton.addEventListener("click", () => {
+console.log(bookList[0]);
 renderAllBooks(filterBooks(bookList))
+}
 );
 
 //------SORT FEATURE-------
@@ -165,6 +167,7 @@ const renderBook = (book) => {
     const comment = document.createElement("p");
     comment.textContent = userInput;
     commentSection.append(comment);
+    // renderAllBooks(bookList);
     console.log(userInput);
     console.log(bookList[0]);
   })
