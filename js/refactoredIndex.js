@@ -162,7 +162,11 @@ const renderBook = (book) => {
     console.log("send button was clicked");
     const userInput = commentField.value;
     bookList.comment = userInput;
+    const comment = document.createElement("p");
+    comment.textContent = userInput;
+    commentSection.append(comment);
     console.log(userInput);
+    console.log(bookList[0]);
   })
 });
 
