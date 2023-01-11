@@ -160,6 +160,14 @@ const renderBook = (book) => {
     sendButton.textContent = "Send";
     bookCard.append(commentField, sendButton);
     commentButton.remove();
+       // listening function for submit comment button
+   function submitAComment() {
+    const newComment = document.createElement("p");
+    newComment.className = "newComment";
+    newComment.textContent = commentField.value;
+    bookCard.append(newComment);
+   }
+    sendButton.addEventListener("click", submitAComment);
   }
   // add event listener to comment button
   commentButton.addEventListener("click", leaveAComment);
