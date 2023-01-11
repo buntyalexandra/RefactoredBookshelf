@@ -161,7 +161,7 @@ const renderBook = (book) => {
   sendButton.addEventListener("click", () => {
     console.log("send button was clicked");
     const userInput = commentField.value;
-    bookList.comment = userInput;
+    book.comment = userInput;
     const comment = document.createElement("p");
     comment.textContent = userInput;
     commentSection.append(comment);
