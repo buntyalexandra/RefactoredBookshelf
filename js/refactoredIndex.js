@@ -111,6 +111,9 @@ const labelAsFavorite = (book) => {
   renderAllBooks(bookList);
 };
 
+//-------COMMENT BUTTON-------
+
+
 //------RENDERING ONE BOOK-----------
 const renderBook = (book) => {
   const { author, language, subject, title } = book;
@@ -142,35 +145,20 @@ const renderBook = (book) => {
     : favoriteButton;
   bookCard.append(elementToAdd);
   // Comment button 
+  const commentSection = document.createElement("section");
   const commentButton = document.createElement("button");
+  commentButton.className = "commentButton";
   commentButton.textContent = "Leave a comment";
-  bookCard.append(commentButton);
-  // what happens when you click the comment button:
-  // the commentButton goes away
-  // a text input field appears
-  // a send button appears
-  // what happens when you click the send button:
-  // the text input value gets stuck to the book card
-  // listener function for the comment button
-  function leaveAComment() {
-    const commentField = document.createElement("input");
-    commentField.className = "commentField";
-    const sendButton = document.createElement("button");
-    sendButton.className = "sendButton";
-    sendButton.textContent = "Send";
-    bookCard.append(commentField, sendButton);
-    commentButton.remove();
-       // listening function for submit comment button
-   function submitAComment() {
-    const newComment = document.createElement("p");
-    newComment.className = "newComment";
-    newComment.textContent = commentField.value;
-    bookCard.append(newComment);
-   }
-    sendButton.addEventListener("click", submitAComment);
-  }
-  // add event listener to comment button
-  commentButton.addEventListener("click", leaveAComment);
+  commentSection.append(commentButton);
+  bookCard.append(commentSection);
+
+  commentButton.addEventListener("click", () => {console.log("comment button was clicked")
+  const commentField = document.createElement("input");
+  const sendButton = document.createElement("button");
+  sendButton.textContent = "Send";
+  bookCard.append(commentField, sendButton); 
+  commentButton.remove();
+});
 
   return bookCard;
 };
