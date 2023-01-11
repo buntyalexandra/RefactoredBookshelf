@@ -158,6 +158,12 @@ const renderBook = (book) => {
   sendButton.textContent = "Send";
   bookCard.append(commentField, sendButton); 
   commentButton.remove();
+  sendButton.addEventListener("click", () => {
+    console.log("send button was clicked");
+    const userInput = commentField.value;
+    bookList.comment = userInput;
+    console.log(userInput);
+  })
 });
 
   return bookCard;
