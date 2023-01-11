@@ -19,10 +19,34 @@ const bookList = bookData;
 const bookshelfSection = document.querySelector(".bookshelfSection");
 
 //-------ADD A BOOK FEATURE-------
-// input fields for: title, author, subjects, language
-// button to add the book that will:
-// add the book to the bookList
-// render the book on the page
+const addBookButton = document.querySelector(".addBookButton");
+// what needs to happen when the addBookButton is clicked:
+// an object is created from the input values
+// the object is added to the front of the bookList (array of books)
+// the page is re-rendered with the added book
+
+//querySelect the input values of the fields
+const titleInput = document.querySelector(".titleInput");
+const authorInput = document.querySelector(".authorInput");
+const subjectInput = document.querySelector(".subjectInput");
+const languageInput = document.querySelector(".languageInput");
+
+// listener function for the addBookButton to execute on click
+function addABook() {
+  // make a new object according to the input values
+  let newBookObject = {};
+  newBookObject.author = authorInput.value; 
+  newBookObject.language = languageInput.value; 
+  newBookObject.subject = subjectInput.value; 
+  newBookObject.title = titleInput.value; 
+  // put it at the front of our array of books
+  bookList.unshift(newBookObject); 
+  // render all books in the bookList 
+  const elements = bookList.map(renderBook);
+  bookshelfSection.replaceChildren(...elements);
+}
+// add listener function to the addBookButton
+addBookButton.addEventListener("click", addABook);
 
 //------SEARCH FEATURE------
 const searchInput = document.querySelector(".searchInput");
