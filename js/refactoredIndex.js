@@ -141,6 +141,29 @@ const renderBook = (book) => {
     ? bookFavorited
     : favoriteButton;
   bookCard.append(elementToAdd);
+  // Comment button 
+  const commentButton = document.createElement("button");
+  commentButton.textContent = "Leave a comment";
+  bookCard.append(commentButton);
+  // what happens when you click the comment button:
+  // the commentButton goes away
+  // a text input field appears
+  // a send button appears
+  // what happens when you click the send button:
+  // the text input value gets stuck to the book card
+  // listener function for the comment button
+  function leaveAComment() {
+    const commentField = document.createElement("input");
+    commentField.className = "commentField";
+    const sendButton = document.createElement("button");
+    sendButton.className = "sendButton";
+    sendButton.textContent = "Send";
+    bookCard.append(commentField, sendButton);
+    commentButton.remove();
+  }
+  // add event listener to comment button
+  commentButton.addEventListener("click", leaveAComment);
+
   return bookCard;
 };
 
