@@ -18,15 +18,11 @@ const bookList = bookData;
 // my bookshelf section
 const bookshelfSection = document.querySelector(".bookshelfSection");
 
-//-----FAVORITE BUTTON------
-// the button renders in the book render function
-const favoriteBooks = [];
-// function to add the book to the favoriteBooks array and to rerender all the books
-const labelAsFavorite = (book) => {
-  favoriteBooks.push(book);
-  console.log(favoriteBooks);
-  renderAllBooks(bookList);
-};
+//-------ADD A BOOK FEATURE-------
+// input fields for: title, author, subjects, language
+// button to add the book that will:
+// add the book to the bookList
+// render the book on the page
 
 //------SEARCH FEATURE------
 const searchInput = document.querySelector(".searchInput");
@@ -58,7 +54,7 @@ sortMenu.addEventListener("change", () => {
   if (sortMenu.value === "Sort by Number of Topics")
     renderAllBooks(sortBooksByNumTopics(bookList));
 });
-
+// NEED TO UPDATE THIS FUNCTION
 const sortBooksByNumTopics = (books) => {
   console.log("I'm sorting by number of book topics");
   // Need to update this sort function
@@ -80,6 +76,16 @@ const sortBooksByTitleAZ = (books) => {
 // unit05 bookshelf solution 
 // Button that when clicked shows the number of non-English books  
 
+
+//-----FAVORITE BUTTON------
+// the button renders in the book render function
+const favoriteBooks = [];
+// function to add the book to the favoriteBooks array and to rerender all the books
+const labelAsFavorite = (book) => {
+  favoriteBooks.push(book);
+  console.log(favoriteBooks);
+  renderAllBooks(bookList);
+};
 
 //------RENDERING ONE BOOK-----------
 const renderBook = (book) => {
