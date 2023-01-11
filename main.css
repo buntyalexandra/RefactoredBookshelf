@@ -1,3 +1,29 @@
+nav {
+  display: flex;
+  background-color: peru;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.menuItem {
+  list-style-type: none;
+  color: #f9f9df;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.menuItem:hover {
+  color: lavender;
+}
+
 .card {
   background-color: lavender;
   display: flex;
@@ -37,7 +63,7 @@ body {
 
 .language {
   color: #d2985e;
-  font-size: .5em;
+  font-size: 0.5em;
   font-family: "Playfair Display", serif;
   font-weight: 400;
   margin: 0;
@@ -45,7 +71,7 @@ body {
 
 .subjectTags {
   color: #d2985e;
-  font-size: .5em;
+  font-size: 0.5em;
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: italic;
