@@ -181,6 +181,7 @@ const renderBook = (book) => {
   const commentField = document.createElement("input");
   const sendButton = document.createElement("button");
   sendButton.textContent = "Send";
+  commentField.maxLength = "280";
   bookCard.append(commentField, sendButton); 
   commentButton.remove();
   sendButton.addEventListener("click", () => {
