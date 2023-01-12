@@ -181,11 +181,6 @@ button:hover {
   color: rgb(127, 127, 167);
 }
 
-.searchInput::placeholder {
-  font-family: "Playfair Display", serif;
-  color: rgb(168, 168, 184);
-}
-
 .searchButton {
   display: flex; 
   background-color: khaki;
@@ -235,7 +230,7 @@ button:hover {
   color: rgb(127, 127, 167);
 }
 
-#addBookInput::placeholder {
+#addBookInput::placeholder, .commentField::placeholder, .searchInput::placeholder {
   font-family: "Playfair Display", serif;
   color: rgb(168, 168, 184);
 }
@@ -249,4 +244,48 @@ button:hover {
 
 .addBookButton {
   margin-top: 0; 
+}
+
+.counterElement {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: rgb(127, 127, 167);
+  text-align: center;
+  font-style: italic;
+}
+
+.commentSectionHeader {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 1em;
+  color: rgb(127, 127, 167);
+  text-align: center;
+}
+
+.commentField {
+  background-color: rgb(247, 247, 255);
+  padding: .5em;
+  border: none;
+  outline: none;
+  font-family: "Playfair Display", serif;
+  color: rgb(127, 127, 167);
+}
+
+.comment {
+  font-family: "Playfair Display", serif;
+  color: rgb(127, 127, 167);
+  font-style: italic;
+}
+
+.commentButton {
+  background-color: khaki;
+  border: none;
+  padding: .6em;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: peru;
+  border-radius: 2em;
+  margin: 2em;
 }

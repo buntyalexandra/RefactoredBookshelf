@@ -187,13 +187,17 @@ const renderBook = (book) => {
   commentButton.textContent = "Leave a comment";
   const commentSectionHeader = document.createElement("h1");
   commentSectionHeader.textContent = "COMMENTS SECTION";
+  commentSectionHeader.className = "commentSectionHeader";
   const comment = document.createElement("p");
+  comment.className = "comment";
   comment.textContent = book.comment;
   commentSection.append(commentSectionHeader, comment, commentButton);
   bookCard.append(commentSection);
 
   commentButton.addEventListener("click", () => {console.log("comment button was clicked")
   const commentField = document.createElement("input");
+  commentField.className = "commentField";
+  commentField.placeholder = "Your comment..."
   const sendButton = document.createElement("button");
   sendButton.textContent = "Send";
   commentField.maxLength = "280";
