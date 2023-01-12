@@ -83,8 +83,7 @@ sortMenu.addEventListener("change", () => {
 // NEED TO UPDATE THIS FUNCTION
 const sortBooksByNumTopics = (books) => {
   console.log("I'm sorting by number of book topics");
-  // Need to update this sort function
-  return books.sort((a, b) => (a.title < b.title ? -1 : 1));
+  return books.sort((a, b) => (a.subject.length < b.subject.length ? -1 : 1));
 };
 
 const sortBooksByAuthorAZ = (books) => {
@@ -112,9 +111,6 @@ const labelAsFavorite = (book) => {
   console.log(favoriteBooks);
   renderAllBooks(bookList);
 };
-
-//-------COMMENT BUTTON-------
-
 
 //------RENDERING ONE BOOK-----------
 const renderBook = (book) => {
@@ -146,13 +142,13 @@ const renderBook = (book) => {
     ? bookFavorited
     : favoriteButton;
   bookCard.append(elementToAdd);
-  // Comment button 
+  // Comment feature 
   const commentSection = document.createElement("section");
   const commentButton = document.createElement("button");
   commentButton.className = "commentButton";
   commentButton.textContent = "Leave a comment";
   const commentSectionHeader = document.createElement("h1");
-  commentSectionHeader.textContent = "Comment Section";
+  commentSectionHeader.textContent = "COMMENTS SECTION";
   const comment = document.createElement("p");
   comment.textContent = book.comment;
   commentSection.append(commentSectionHeader, comment, commentButton);
