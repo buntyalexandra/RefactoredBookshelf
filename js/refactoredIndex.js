@@ -123,6 +123,19 @@ const sortBooksByTitleZA = (books) => {
 // TDD 5 Alternate: `reduce` is used to implement a counter on the page of the number of non-English books in the collection
 // unit05 bookshelf solution 
 // Button that when clicked shows the number of non-English books  
+// we want to return a number
+// that number is the amount of books in bookList that do not have "en" as their language value (bookList.language !== "en")
+// need to set an initial value of 0 when we call reduce
+// so something like bookList.reduce(countNonEnBooks, 0)
+function countNonEnBooks(accumulator, currentValue){
+  if (currentValue.language !== "en"){
+    accumulator += 1;
+  }
+  return accumulator;
+}
+const counterElement = document.querySelector(".counterElement");
+counterElement.textContent = `The number of non-English books on the bookshelf is: ${bookList.reduce(countNonEnBooks, 0)}`;
+
 
 
 //-----FAVORITE BUTTON------
