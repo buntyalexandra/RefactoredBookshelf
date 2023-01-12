@@ -74,14 +74,27 @@ sortMenu.addEventListener("change", () => {
     // call the corresponding function
     renderAllBooks(sortBooksByTitleAZ(bookList));
   }
+  if (sortMenu.value === "Sort by Title from Z-A") {
+    renderAllBooks(sortBooksByTitleZA(bookList));
+  }
   if (sortMenu.value === "Sort by Author from A-Z") {
     renderAllBooks(sortBooksByAuthorAZ(bookList));
   }
-  if (sortMenu.value === "Sort by Number of Topics")
-    renderAllBooks(sortBooksByNumTopics(bookList));
-});
-// NEED TO UPDATE THIS FUNCTION
-const sortBooksByNumTopics = (books) => {
+  if (sortMenu.value === "Sort by Author from Z-A") {
+    renderAllBooks(sortBooksByAuthorZA(bookList));
+  }
+  if (sortMenu.value === "Sort by Number of Topics, High to Low") {
+    renderAllBooks(sortBooksByNumTopicsHighLow(bookList));
+  }
+  if (sortMenu.value === "Sort by Number of Topics, Low to High")renderAllBooks(sortBooksByNumTopicsLowHigh(bookList));
+}
+);
+const sortBooksByNumTopicsHighLow = (books) => {
+  console.log("I'm sorting by number of book topics");
+  return books.sort((a, b) => (a.subject.length > b.subject.length ? -1 : 1));
+};
+
+const sortBooksByNumTopicsLowHigh = (books) => {
   console.log("I'm sorting by number of book topics");
   return books.sort((a, b) => (a.subject.length < b.subject.length ? -1 : 1));
 };
@@ -91,9 +104,19 @@ const sortBooksByAuthorAZ = (books) => {
   return books.sort((a, b) => (a.author < b.author ? -1 : 1));
 };
 
+const sortBooksByAuthorZA = (books) => {
+  console.log("I'm sorting by author A to Z");
+  return books.sort((a, b) => (a.author > b.author ? -1 : 1));
+};
+
 const sortBooksByTitleAZ = (books) => {
   console.log("I'm sorting by title A to Z");
   return books.sort((a, b) => (a.title < b.title ? -1 : 1));
+};
+
+const sortBooksByTitleZA = (books) => {
+  console.log("I'm sorting by title A to Z");
+  return books.sort((a, b) => (a.title > b.title ? -1 : 1));
 };
 
 //-------COUNTER FEATURE--------
