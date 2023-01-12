@@ -151,7 +151,11 @@ const renderBook = (book) => {
   const commentButton = document.createElement("button");
   commentButton.className = "commentButton";
   commentButton.textContent = "Leave a comment";
-  commentSection.append(commentButton);
+  const commentSectionHeader = document.createElement("h1");
+  commentSectionHeader.textContent = "Comment Section";
+  const comment = document.createElement("p");
+  comment.textContent = book.comment;
+  commentSection.append(commentSectionHeader, comment, commentButton);
   bookCard.append(commentSection);
 
   commentButton.addEventListener("click", () => {console.log("comment button was clicked")
@@ -164,10 +168,7 @@ const renderBook = (book) => {
     console.log("send button was clicked");
     const userInput = commentField.value;
     book.comment = userInput;
-    const comment = document.createElement("p");
     comment.textContent = userInput;
-    commentSection.append(comment);
-    // renderAllBooks(bookList);
     console.log(userInput);
     console.log(bookList[0]);
   })
