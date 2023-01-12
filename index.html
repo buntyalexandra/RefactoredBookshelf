@@ -19,32 +19,36 @@
       </section>
     </nav>
 
-    <h1 class="pageHeader">Welcome to the Bookshelf!</h1>
+    <section class="sortMenuSection">
+      <select class="sortMenu">
+        <option>Please select a sorting option</option>
+        <option class="sortMenuOpt">Sort by Title from A-Z</option>
+        <option class="sortMenuOpt">Sort by Title from Z-A</option>
+        <option class="sortMenuOpt">Sort by Author from A-Z</option>
+        <option class="sortMenuOpt">Sort by Author from Z-A</option>
+        <option class="sortMenuOpt">Sort by Number of Topics, Low to High</option>
+        <option class="sortMenuOpt">Sort by Number of Topics, High to Low</option>
+      </select>
+    </section>
+
+    <h1 class="pageHeader">The Bookshelf</h1>
 
     <section class="search">
       <input class="searchInput" type="text" placeholder="Search for a book by title, author, or topic area"/>
       <button class="searchButton">Search</button>
-      <select class="sortMenu">
-        <option>Please select a sorting option</option>
-        <option class="titleAZ">Sort by Title from A-Z</option>
-        <option class="titleAZ">Sort by Title from Z-A</option>
-        <option class="authorAZ">Sort by Author from A-Z</option>
-        <option class="authorZA">Sort by Author from Z-A</option>
-        <option class="numTopics">Sort by Number of Topics, Low to High</option>
-        <option class="numTopics">Sort by Number of Topics, High to Low</option>
-      </select>
+    </section>
+
+    <section class="addBook">
+      <h2 class="addBookHeading">Add a Book to the Bookshelf</h2>
+      <input id="addBookInput" class="titleInput" type="text" placeholder="Title"/>
+      <input id="addBookInput" class="authorInput" type="text" placeholder="Author"/>
+      <input id="addBookInput" class="subjectInput" type="text" placeholder="Subjects"/>
+      <input id="addBookInput" class="languageInput" type="text" placeholder="Language"/>
+      <button class="addBookButton">Add Book!</button>
     </section>
 
     <section class="counter">
       <p class="counterElement"></p>
-    </section>
-
-    <section class="addBook">
-      <input class="titleInput" type="text" placeholder="Title"/>
-      <input class="authorInput" type="text" placeholder="Author"/>
-      <input class="subjectInput" type="text" placeholder="Subjects"/>
-      <input class="languageInput" type="text" placeholder="Language"/>
-      <button class="addBookButton">Add a Book!</button>
     </section>
 
     <main>

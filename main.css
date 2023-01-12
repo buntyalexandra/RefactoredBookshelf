@@ -79,12 +79,14 @@ body {
 
 .pageHeader {
   color: #d2985e;
-  font-size: 5em;
+  font-size: 3em;
   font-family: "Playfair Display", serif;
-  font-weight: 900;
+  font-weight: 700;
   margin-left: 0.5em;
   margin-top: 0.5em;
   margin-bottom: 0;
+  font-style: italic;
+  text-align: center;
 }
 
 button {
@@ -128,4 +130,123 @@ button:hover {
   font-weight: 500;
   font-size: 1em;
   color: rgb(127, 127, 167);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.contactHeader {
+  display: flex;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 2em;
+  color: rgb(127, 127, 167);
+}
+
+.contactInput {
+  width: 25%;
+  background-color: lavender;
+  padding: 1em;
+  border: none;
+  outline: none;
+  font-family: "Playfair Display", serif;
+  color: rgb(127, 127, 167);
+}
+
+.contactInput::placeholder {
+  font-family: "Playfair Display", serif;
+  color: rgb(168, 168, 184);
+}
+
+.search {
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchInput {
+  display: flex; 
+  height: 1em;
+  width: 25%;  
+  background-color: lavender;
+  padding: 1em;
+  border: none;
+  outline: none;
+  font-family: "Playfair Display", serif;
+  color: rgb(127, 127, 167);
+}
+
+.searchInput::placeholder {
+  font-family: "Playfair Display", serif;
+  color: rgb(168, 168, 184);
+}
+
+.searchButton {
+  display: flex; 
+  background-color: khaki;
+  border: none;
+  padding: 1em;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: peru;
+  border-radius: 2em;
+  margin: 2em;
+}
+
+.sortMenuSection {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 2%;
+}
+
+.sortMenu {
+  display: flex;
+  background-color: lavender;
+  border: none;
+  height: 3em; 
+  outline: none; 
+  font-family: "Playfair Display", serif;
+  color: rgb(127, 127, 167);
+  position: absolute;
+}
+
+.addBook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+}
+
+#addBookInput {
+  display: flex;
+  height: 1em;
+  width: 25%;  
+  background-color: lavender;
+  padding: 1em;
+  border: none;
+  outline: none;
+  font-family: "Playfair Display", serif;
+  color: rgb(127, 127, 167);
+}
+
+#addBookInput::placeholder {
+  font-family: "Playfair Display", serif;
+  color: rgb(168, 168, 184);
+}
+
+.addBookHeading {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 1em;
+  color: rgb(127, 127, 167);
+}
+
+.addBookButton {
+  margin-top: 0; 
 }
