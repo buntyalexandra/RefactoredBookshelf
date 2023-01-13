@@ -1,3 +1,16 @@
+.upperFeatures {
+  display:flex; 
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.searchAndSortFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 1em; 
+}
+
 nav {
   display: flex;
   background-color: peru;
@@ -98,7 +111,7 @@ button {
   font-size: 1em;
   color: peru;
   border-radius: 2em;
-  margin: 2em;
+  /* margin: 2em; */
 }
 
 button:hover {
@@ -167,12 +180,12 @@ button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
 }
 
 .searchInput {
-  display: flex; 
   height: 1em;
-  width: 25%;  
+  width: 100%;  
   background-color: lavender;
   padding: 1em;
   border: none;
@@ -182,7 +195,6 @@ button:hover {
 }
 
 .searchButton {
-  display: flex; 
   background-color: khaki;
   border: none;
   padding: 1em;
@@ -191,7 +203,7 @@ button:hover {
   font-size: 1em;
   color: peru;
   border-radius: 2em;
-  margin: 2em;
+  margin-left: 1em;
 }
 
 .sortMenuSection {
@@ -201,7 +213,6 @@ button:hover {
 }
 
 .sortMenu {
-  display: flex;
   background-color: lavender;
   border: none;
   height: 3em; 
@@ -219,9 +230,8 @@ button:hover {
 }
 
 #addBookInput {
-  display: flex;
   height: 1em;
-  width: 25%;  
+  width: 100%;  
   background-color: lavender;
   padding: 1em;
   border: none;
